@@ -1,0 +1,392 @@
+{
+  "topic": "Softmodded Xbox Original Capabilities, video output modes, Region free switching, playing burned discs, auto handling region locked content",
+  "generated_at": "2026-09-25T09:42:55.654086+00:00",
+  "model": "gpt-6-luna",
+  "workflow_version": "required-sections-v1",
+  "required_sections": {
+    "softmod_capabilities": {
+      "heading": "Softmod capabilities",
+      "research_question": "What capabilities does a softmod actually add, and which depend on a specific tool or setup?"
+    },
+    "video_output_modes": {
+      "heading": "Video output modes",
+      "research_question": "Which PAL/NTSC and resolution modes are documented, and what cable, console, and game limits apply?"
+    },
+    "game_region_switching": {
+      "heading": "Game-region switching",
+      "research_question": "How are game-region checks handled, and how does changing video standard differ from game region?"
+    },
+    "burned_discs": {
+      "heading": "Playing burned discs",
+      "research_question": "What software and optical-drive conditions affect reading burned game discs?"
+    },
+    "automatic_handling": {
+      "heading": "Automatic handling of region-locked content",
+      "research_question": "Which behaviors are automatic, which need manual configuration, and how do game and DVD-movie regions differ?"
+    }
+  },
+  "outline": [
+    {
+      "section_key": "softmod_capabilities",
+      "heading": "Softmod capabilities",
+      "supporting_reference_ids": [
+        "R1",
+        "R2",
+        "R7"
+      ]
+    },
+    {
+      "section_key": "video_output_modes",
+      "heading": "Video output modes",
+      "supporting_reference_ids": [
+        "R1",
+        "R4",
+        "R5",
+        "R8"
+      ]
+    },
+    {
+      "section_key": "game_region_switching",
+      "heading": "Game-region switching",
+      "supporting_reference_ids": [
+        "R2",
+        "R5",
+        "R6",
+        "R9"
+      ]
+    },
+    {
+      "section_key": "burned_discs",
+      "heading": "Playing burned discs",
+      "supporting_reference_ids": [
+        "R3",
+        "R4",
+        "R8"
+      ]
+    },
+    {
+      "section_key": "automatic_handling",
+      "heading": "Automatic handling of region-locked content",
+      "supporting_reference_ids": [
+        "R2",
+        "R5",
+        "R6",
+        "R8"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "R1",
+      "title": "Xbox Softmodding Tool README",
+      "url": "https://github.com/Rocky5/Xbox-Softmodding-Tool/blob/master/README.md",
+      "publisher": "Rocky5 / GitHub",
+      "published_date": "",
+      "supported_claims": [
+        "Rocky5’s specific softmod advertises unsigned-code execution, NKPatcher settings, dashboard and softmod repair, and a video-region setting.",
+        "The README says the tool supports all Xbox versions, but does not establish that every feature behaves identically on every console or configuration."
+      ],
+      "evidence_summary": "The project README directly lists the tool’s features and describes NKPatcher as the component that patches the kernel and enables unsigned code. It documents NTSC/PAL video-setting options and notes component cable use for HD resolutions. These are claims about this tool, not every softmod.",
+      "grade": "A",
+      "score": 96,
+      "verdict": "verified",
+      "fact_check_notes": "Independently opened and checked. Current README content directly supports the project-specific claims; the broad all-versions statement is the project’s own claim, not an independent compatibility test."
+    },
+    {
+      "id": "R2",
+      "title": "Xbox: Frequently Asked Questions",
+      "url": "https://consolemods.org/wiki/Xbox%3AFrequently_Asked_Questions_%28FAQ%29/en",
+      "publisher": "ConsoleMods Wiki",
+      "published_date": "",
+      "supported_claims": [
+        "The FAQ describes exploiting the console as enabling homebrew and says game backups can be played without region locks.",
+        "The FAQ says a PAL Xbox can be switched to NTSC with Enigmah-X for access to 720p and 1080i; it also says modded dashboards can choose a game’s highest supported resolution and the correct region."
+      ],
+      "evidence_summary": "The independently checked FAQ distinguishes region selection and video resolution in its guidance. It is community-maintained and gives an overview, not a complete compatibility matrix or proof that every dashboard/setup handles every title automatically.",
+      "grade": "B",
+      "score": 84,
+      "verdict": "verified",
+      "fact_check_notes": "Independently opened and checked. The supplied URL redirects to the canonical page with decoded punctuation; no substantive correction needed. The FAQ supports the claims as community guidance, with setup-specific limits."
+    },
+    {
+      "id": "R3",
+      "title": "Xbox: DVDROM",
+      "url": "https://consolemods.org/wiki/Xbox%3ADVDROM/en",
+      "publisher": "ConsoleMods Wiki",
+      "published_date": "",
+      "supported_claims": [
+        "The page’s drive-by-media table reports that optical-drive models differ in their compatibility with CD-R, CD-RW, DVD-R, and other media.",
+        "The table characterizes compatibility as variable, including media that works with most or some media, rather than guaranteed for every drive."
+      ],
+      "evidence_summary": "The checked page contains a drive-model/media-type compatibility table and legend. This supports the claim that burned-disc reading depends on drive model and media. It does not, in the checked content, establish detailed burning-software requirements, condition-related failure rates, or generic-drive dashboard/eject limitations.",
+      "grade": "B",
+      "score": 78,
+      "verdict": "partially_supported",
+      "fact_check_notes": "Independently opened and checked. The page supports drive/media variation, but the supplied broader claims about drive condition, failures, and replacement behavior were not established by the checked material."
+    },
+    {
+      "id": "R4",
+      "title": "Xbox Hardware Design Specification",
+      "url": "https://consolemods.org/wiki/images/a/ae/Xbox_Hardware_Design_Specification_1.02.pdf",
+      "publisher": "Microsoft (hosted by ConsoleMods Wiki)",
+      "published_date": "",
+      "supported_claims": [
+        "The specification documents TV-encoder output modes including NTSC-M, NTSC-J, PAL-I, PAL-M, PAL-60, and component HDTV output.",
+        "The specification lists component HDTV modes of 480p, 720p, and 1080i, while noting VGA is for development and not officially supported in retail Xbox."
+      ],
+      "evidence_summary": "The independently checked PDF’s video-output section and conversion matrix list supported signal families and HDTV modes. The document describes hardware capability; it does not show that every retail console, cable, game, or television can use every mode.",
+      "grade": "A",
+      "score": 93,
+      "verdict": "verified",
+      "fact_check_notes": "Independently opened and checked. This is a primary technical document hosted by a community wiki; the host does not change the document’s stated scope or prove universal retail usability."
+    },
+    {
+      "id": "R5",
+      "title": "Original Xbox EEPROM data structures",
+      "url": "https://github.com/feudalnate/Original-Xbox-Data-Structures/blob/master/EEPROM/README.md",
+      "publisher": "feudalnate / GitHub",
+      "published_date": "",
+      "supported_claims": [
+        "The repository identifies a DVD-region-lock setting in the Xbox EEPROM separately from other configuration data.",
+        "The repository does not establish how a particular softmod or playback application enforces or changes DVD-movie-region behavior."
+      ],
+      "evidence_summary": "The checked EEPROM field table lists a DVD Region setting and labels its initial origin as unknown. The repository also documents separate region flags. This supports distinguishing the DVD-region field from general video-mode discussion, but does not independently establish practical playback behavior.",
+      "grade": "B",
+      "score": 80,
+      "verdict": "partially_supported",
+      "fact_check_notes": "Independently opened and checked. Retained the supplied GitHub URL. Its technical documentation is useful for the EEPROM-field distinction, but should not be treated as proof of application-level behavior."
+    },
+    {
+      "id": "R6",
+      "title": "NKPatcher config.inc",
+      "url": "https://github.com/Rocky5/Xbox-Softmodding-Tool/blob/master/App%20Sources/NKPatcher/Main%20NKP11/config.inc",
+      "publisher": "Rocky5",
+      "published_date": "",
+      "supported_claims": [
+        "The inspected source defines GAME_REGION_AUTO but comments it out by default.",
+        "It describes choosing a region from the executable header when enabled."
+      ],
+      "evidence_summary": "Manually checked against the linked source during post-run review.",
+      "grade": null,
+      "score": null,
+      "verdict": "manually_reviewed",
+      "fact_check_notes": "Source-file configuration, not proof of a compiled release setting."
+    },
+    {
+      "id": "R7",
+      "title": "Xbox: Upgrading your hard drive",
+      "url": "https://consolemods.org/wiki/Upgrading_your_Hard_Drive",
+      "publisher": "ConsoleMods Wiki",
+      "published_date": "",
+      "supported_claims": [
+        "The guide describes using an EEPROM backup and a lockable replacement drive on a softmodded Xbox."
+      ],
+      "evidence_summary": "Manually checked against the linked source during post-run review.",
+      "grade": null,
+      "score": null,
+      "verdict": "manually_reviewed",
+      "fact_check_notes": "Community procedure requiring hardware and software beyond the softmod."
+    },
+    {
+      "id": "R8",
+      "title": "Official AvaLaunch Manual, version 2.2",
+      "url": "https://avalaunch.net/docs/manualv2.2.pdf",
+      "publisher": "AvaLaunch",
+      "published_date": "",
+      "supported_claims": [
+        "The manual describes choosing PAL or NTSC with the Enigmah VideoMode Switchdisc and rebooting.",
+        "It says to burn the utility onto media that boots on the user’s Xbox."
+      ],
+      "evidence_summary": "Manually checked against the linked source during post-run review.",
+      "grade": null,
+      "score": null,
+      "verdict": "manually_reviewed",
+      "fact_check_notes": "A specific utility procedure, not a universal softmod feature."
+    },
+    {
+      "id": "R9",
+      "title": "Xbox executable data structures: XBE.cs",
+      "url": "https://github.com/feudalnate/Original-Xbox-Data-Structures/blob/master/Xbox%20Executable/XBE.cs",
+      "publisher": "feudalnate",
+      "published_date": "",
+      "supported_claims": [
+        "The source lists game-region flags and executable certificate fields."
+      ],
+      "evidence_summary": "Manually checked against the linked source during post-run review.",
+      "grade": null,
+      "score": null,
+      "verdict": "manually_reviewed",
+      "fact_check_notes": "Technical structure description, not proof of a particular game’s behavior."
+    }
+  ],
+  "generation_references": [
+    {
+      "id": "R1",
+      "title": "Xbox Softmodding Tool README",
+      "url": "https://github.com/Rocky5/Xbox-Softmodding-Tool/blob/master/README.md",
+      "publisher": "Rocky5 / GitHub",
+      "published_date": "",
+      "supported_claims": [
+        "Rocky5’s specific softmod advertises unsigned-code execution, NKPatcher settings, dashboard and softmod repair, and a video-region setting.",
+        "The README says the tool supports all Xbox versions, but does not establish that every feature behaves identically on every console or configuration."
+      ],
+      "evidence_summary": "The project README directly lists the tool’s features and describes NKPatcher as the component that patches the kernel and enables unsigned code. It documents NTSC/PAL video-setting options and notes component cable use for HD resolutions. These are claims about this tool, not every softmod.",
+      "grade": "A",
+      "score": 96,
+      "verdict": "verified",
+      "fact_check_notes": "Independently opened and checked. Current README content directly supports the project-specific claims; the broad all-versions statement is the project’s own claim, not an independent compatibility test."
+    },
+    {
+      "id": "R2",
+      "title": "Xbox: Frequently Asked Questions",
+      "url": "https://consolemods.org/wiki/Xbox%3AFrequently_Asked_Questions_%28FAQ%29/en",
+      "publisher": "ConsoleMods Wiki",
+      "published_date": "",
+      "supported_claims": [
+        "The FAQ describes exploiting the console as enabling homebrew and says game backups can be played without region locks.",
+        "The FAQ says a PAL Xbox can be switched to NTSC with Enigmah-X for access to 720p and 1080i; it also says modded dashboards can choose a game’s highest supported resolution and the correct region."
+      ],
+      "evidence_summary": "The independently checked FAQ distinguishes region selection and video resolution in its guidance. It is community-maintained and gives an overview, not a complete compatibility matrix or proof that every dashboard/setup handles every title automatically.",
+      "grade": "B",
+      "score": 84,
+      "verdict": "verified",
+      "fact_check_notes": "Independently opened and checked. The supplied URL redirects to the canonical page with decoded punctuation; no substantive correction needed. The FAQ supports the claims as community guidance, with setup-specific limits."
+    },
+    {
+      "id": "R3",
+      "title": "Xbox: DVDROM",
+      "url": "https://consolemods.org/wiki/Xbox%3ADVDROM/en",
+      "publisher": "ConsoleMods Wiki",
+      "published_date": "",
+      "supported_claims": [
+        "The page’s drive-by-media table reports that optical-drive models differ in their compatibility with CD-R, CD-RW, DVD-R, and other media.",
+        "The table characterizes compatibility as variable, including media that works with most or some media, rather than guaranteed for every drive."
+      ],
+      "evidence_summary": "The checked page contains a drive-model/media-type compatibility table and legend. This supports the claim that burned-disc reading depends on drive model and media. It does not, in the checked content, establish detailed burning-software requirements, condition-related failure rates, or generic-drive dashboard/eject limitations.",
+      "grade": "B",
+      "score": 78,
+      "verdict": "partially_supported",
+      "fact_check_notes": "Independently opened and checked. The page supports drive/media variation, but the supplied broader claims about drive condition, failures, and replacement behavior were not established by the checked material."
+    },
+    {
+      "id": "R4",
+      "title": "Xbox Hardware Design Specification",
+      "url": "https://consolemods.org/wiki/images/a/ae/Xbox_Hardware_Design_Specification_1.02.pdf",
+      "publisher": "Microsoft (hosted by ConsoleMods Wiki)",
+      "published_date": "",
+      "supported_claims": [
+        "The specification documents TV-encoder output modes including NTSC-M, NTSC-J, PAL-I, PAL-M, PAL-60, and component HDTV output.",
+        "The specification lists component HDTV modes of 480p, 720p, and 1080i, while noting VGA is for development and not officially supported in retail Xbox."
+      ],
+      "evidence_summary": "The independently checked PDF’s video-output section and conversion matrix list supported signal families and HDTV modes. The document describes hardware capability; it does not show that every retail console, cable, game, or television can use every mode.",
+      "grade": "A",
+      "score": 93,
+      "verdict": "verified",
+      "fact_check_notes": "Independently opened and checked. This is a primary technical document hosted by a community wiki; the host does not change the document’s stated scope or prove universal retail usability."
+    },
+    {
+      "id": "R5",
+      "title": "Original Xbox EEPROM data structures",
+      "url": "https://github.com/feudalnate/Original-Xbox-Data-Structures/blob/master/EEPROM/README.md",
+      "publisher": "feudalnate / GitHub",
+      "published_date": "",
+      "supported_claims": [
+        "The repository identifies a DVD-region-lock setting in the Xbox EEPROM separately from other configuration data.",
+        "The repository does not establish how a particular softmod or playback application enforces or changes DVD-movie-region behavior."
+      ],
+      "evidence_summary": "The checked EEPROM field table lists a DVD Region setting and labels its initial origin as unknown. The repository also documents separate region flags. This supports distinguishing the DVD-region field from general video-mode discussion, but does not independently establish practical playback behavior.",
+      "grade": "B",
+      "score": 80,
+      "verdict": "partially_supported",
+      "fact_check_notes": "Independently opened and checked. Retained the supplied GitHub URL. Its technical documentation is useful for the EEPROM-field distinction, but should not be treated as proof of application-level behavior."
+    },
+    {
+      "id": "R6",
+      "title": "DVD_REGION structure",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntddcdvd/ns-ntddcdvd-_dvd_region",
+      "publisher": "Microsoft Learn",
+      "published_date": "2024-02-22",
+      "supported_claims": [
+        "Microsoft’s general DVD-device documentation distinguishes the region code of mounted DVD media from the DVD player’s system-region code."
+      ],
+      "evidence_summary": "The Microsoft documentation defines separate media-region and player-region fields in a DVD playback-control structure. It supports the general distinction between DVD movie-region checks and other console-region settings, but is not Xbox-specific.",
+      "grade": "B",
+      "score": 88,
+      "verdict": "verified",
+      "fact_check_notes": "Independently opened and checked. The page is current as displayed and directly supports the general DVD-region distinction, not Xbox-specific softmod behavior."
+    }
+  ],
+  "generation_outline": [
+    {
+      "section_key": "softmod_capabilities",
+      "key_claim": "A softmod can enable unsigned-code execution and homebrew, but additional settings and repair features depend on the specific softmod package.",
+      "supporting_reference_ids": [
+        "R1",
+        "R2"
+      ],
+      "caveat": "Rocky5’s listed features are specific to that tool; community FAQ descriptions are not a compatibility guarantee for every setup.",
+      "heading": "Softmod capabilities"
+    },
+    {
+      "section_key": "video_output_modes",
+      "key_claim": "The Xbox hardware specification documents PAL/NTSC-family output and component HDTV modes up to 1080i, while usable modes depend on configuration, cable, and game support.",
+      "supporting_reference_ids": [
+        "R4",
+        "R1",
+        "R2"
+      ],
+      "caveat": "Hardware capability alone does not establish that every retail console, game, cable, or display supports every mode.",
+      "heading": "Video output modes"
+    },
+    {
+      "section_key": "game_region_switching",
+      "key_claim": "Game-region handling and video-standard selection are distinct: modded systems may bypass game region locks, while a tool such as Rocky5’s offers a separate PAL/NTSC video setting.",
+      "supporting_reference_ids": [
+        "R1",
+        "R2"
+      ],
+      "caveat": "Behavior can depend on the game, dashboard, and softmod configuration; do not equate changing video standard with changing game region.",
+      "heading": "Game-region switching"
+    },
+    {
+      "section_key": "burned_discs",
+      "key_claim": "Burned-disc readability varies by Xbox optical-drive model and media type; the checked sources do not establish a universal software or burning procedure.",
+      "supporting_reference_ids": [
+        "R3"
+      ],
+      "caveat": "The drive/media table is community-maintained and does not establish how wear, recording quality, or every software setup affects results.",
+      "heading": "Playing burned discs"
+    },
+    {
+      "section_key": "automatic_handling",
+      "key_claim": "A community FAQ reports that modded dashboards can select a game’s correct region and highest supported resolution automatically, while DVD-movie region is a separate playback-control setting.",
+      "supporting_reference_ids": [
+        "R2",
+        "R5",
+        "R6"
+      ],
+      "caveat": "Automatic game handling is not established for every dashboard/setup; the DVD-region sources do not show that softmods automatically bypass movie-region checks.",
+      "heading": "Automatic handling of region-locked content"
+    }
+  ],
+  "reference_numbers": {
+    "R1": 1,
+    "R2": 2,
+    "R3": 3,
+    "R4": 4,
+    "R5": 5,
+    "R6": 6,
+    "R7": 7,
+    "R8": 8,
+    "R9": 9
+  },
+  "post_run_review": {
+    "reviewed_at": "2026-09-25T09:48:33.850001+00:00",
+    "method": "Manual source review and draft revision after the recorded model run",
+    "original_workflow_version": "required-sections-v1",
+    "summary_added": true,
+    "source_relevance_reviewed": true,
+    "repeated_points_revised": true,
+    "excluded_original_source": "Microsoft Learn DVD_REGION structure; general Windows DVD-device documentation did not directly establish Xbox behavior."
+  }
+}
